@@ -41,7 +41,7 @@ The following python packages are required by the class.
     * getStatus()
 		Queries the status of the controller. 
 
-Futher functions can be implemented from the manual following the structure of the existing class fuctions. 
+Futher functions can be implemented from the manual following the structure of the existing class functions. 
 
 ##Properties
 
