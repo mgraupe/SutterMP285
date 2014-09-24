@@ -3,9 +3,9 @@ Sutter Instrument MP-285
 
 A python class for communicating with the Sutter Instrument MP-285 Motorized Micromanipulator. 
 
-sutterMP285 implements a class for communicating with a Sutter MP-285 to control the manipulators. The MP-285   must be connected with a 9-pin serial port cable. 
+`sutterMP285` implements a class for communicating with a Sutter MP-285 to control the manipulators. The MP-285   must be connected with a 9-pin serial port cable. 
 
-This class uses the python "serial" package which allows for communication with serial devices through 'write' and 'read'. The communication properties (BaudRate, Terminator, etc.) are set when invoking the serial object with serial.Serial(..). For the MP-285: baud rate to 9600, 8 data bits, no parity, 1 stop bit (see 'COMPUTER INTERFAC1.pdf' manual). 
+This class uses the python `serial` package which allows for communication with serial devices through `write` and `read`. The communication properties (BaudRate, Terminator, etc.) are set when invoking the serial object with `serial.Serial(...)`. For the MP-285: baud rate to 9600, 8 data bits, no parity, 1 stop bit (see 'COMPUTER INTERFAC1.pdf' manual). 
 
 ##Requires
 The following python packages are required by the class. 
@@ -17,7 +17,7 @@ The following python packages are required by the class.
 * time
 
 ##Methods
-  Create the object. The object is opened with serial.Serial.
+  Create the object. The object is opened with `serial.Serial(...)`.
 
     * sutter = sutterMP285()
 
