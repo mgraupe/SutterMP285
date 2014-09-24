@@ -125,7 +125,7 @@ class sutterMP285 :
 			print 'X: %g um \n Y: %g um\n Z: %g um' % (xyz_um[0],xyz_um[1],xyz_um[2])
 		
 		return xyz_um
-	
+	# Moves the three axes to specified location.
 	def gotoPosition(self,pos):
 		if len(pos) != 3:
 			print 'Length of position argument has to be three'
@@ -167,7 +167,7 @@ class sutterMP285 :
 	 # Reset controller
 	def sendReset(self):
 		 self.ser.write('r\r') # Sutter does not reply
-	
+	# Queries the status of the controller. 
 	def getStatus(self):
 		if self.verbose : 
 			print 'sutterMP285: get status info'

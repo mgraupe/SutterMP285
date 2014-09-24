@@ -3,7 +3,7 @@ Sutter Instrument MP-285
 
 A python class for communicating with the Sutter Instrument MP-285 Motorized Micromanipulator. 
 
-sutterMP285 implements a class for communicating with a Sutter MP-285 to control the manipulators. The MP-285   must be connected with a 9-pin serial port. 
+sutterMP285 implements a class for communicating with a Sutter MP-285 to control the manipulators. The MP-285   must be connected with a 9-pin serial port cable. 
 
 This class uses the python "serial" package which allows for communication with serial devices through 'write' and 'read'. The communication properties (BaudRate, Terminator, etc.) are set when invoking the serial object with serial.Serial(..). For the MP-285: baud rate to 9600, 8 data bits, no parity, 1 stop bit (see 'COMPUTER INTERFAC1.pdf' manual). 
 
@@ -24,15 +24,22 @@ The following python packages are required by the class.
   Various functions from the manual are implemented :
 
     * getPosition()
+		Reads out the current postion of the three axes. 
     * gotoPosition(position)
-	position ... is the absolute target position
+		Moves the three axes to specified location.
+		position ... is the absolute target position
     * setVelocity(velocity,vScaleFactor)
-	velocity ... move velocity
-	vScaleFactor ... resolution, 0=10, 1=50 uSteps/step
+		This function changes the velocity of the sutter motions
+		velocity ... move velocity
+		vScaleFactor ... resolution, 0=10, 1=50 uSteps/step
     * updatePanel()
+		Causes the Sutter to display the XYZ info on the front panel.
     * setOrigin()
+		Sets the origin of the coordinate system to the current position.
     * sendReset()
+		Reset controller. 
     * getStatus()
+		Queries the status of the controller. 
 
 Futher functions can be implemented from the manual following the structure of the existing class fuctions. 
 
