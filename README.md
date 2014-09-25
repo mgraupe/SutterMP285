@@ -45,13 +45,12 @@ Futher functions can be implemented from the manual following the structure of t
 
 ##Properties
 
-* verbose - The level of messages displayed (0 or 1). 
-* timeOut - The amount of time within which a move has to be accomplished, otherwise interruption with error. 
+* `verbose` - The level of messages displayed (0 or 1). 
+* `timeOut` - The amount of time within which a move has to be accomplished, otherwise interruption with error. 
 
 ##Example session:
 
 ```python
->> import serial
 >> from sutterMP285_1 import *
 >> sutter = sutterMP285()
    Serial<id=0x4548370, open=True>(port='COM1', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=30, xonxoff=False, rtscts=False, dsrdtr=False)
